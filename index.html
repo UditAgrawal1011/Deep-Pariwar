@@ -97,6 +97,41 @@
       transform: translateY(-3px);
     }
 
+    /* Share buttons */
+    .share-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .share-section p {
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .share-btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffcc33;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin: 0 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .share-btn img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .share-btn:hover {
+      background: #ffaa00;
+      transform: translateY(-5px) scale(1.1);
+    }
+
     footer {
       text-align: center;
       padding: 20px 10px;
@@ -139,6 +174,31 @@
     <img src="certificate.png" alt="Quality Certificate">
     <br>
     <a href="Screenshot 2025-08-05 155118.pdf" class="download-btn" download>Download Certificate</a>
+
+    <!-- Share Buttons -->
+    <div class="share-section">
+      <p>Share this certificate via:</p>
+      
+      <!-- WhatsApp -->
+      <a href="https://api.whatsapp.com/send?text=Check%20out%20our%20Quality%20Certificate%20from%20Deep%20Pariwar!%20https://yourwebsite.com/certificate.png" target="_blank" class="share-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/certificate.png" target="_blank" class="share-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/yourusername" target="_blank" class="share-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+      </a>
+
+      <!-- Twitter / X -->
+      <a href="https://twitter.com/intent/tweet?text=Check%20out%20our%20Quality%20Certificate!%20https://yourwebsite.com/certificate.png" target="_blank" class="share-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_as_of_2021.svg" alt="Twitter">
+      </a>
+    </div>
   </section>
 
   <footer>
