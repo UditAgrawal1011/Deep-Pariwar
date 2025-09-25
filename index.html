@@ -6,154 +6,196 @@
   <title>Deep Pariwar | Quality Certified</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #fff8e5, #fdf1d3);
-      color: #333;
-      overflow-x: hidden;
-    }
+   * { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fff8e5, #fdf1d3);
+  color: #333;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
 
-    header {
-      text-align: center;
-      padding: 25px 10px;
-      background: #ffcc33;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      animation: fadeDown 1s ease forwards;
-    }
+/* HEADER */
+header {
+  text-align: center;
+  padding: 20px 10px;
+  background: #ffcc33;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  animation: fadeDown 1s ease forwards;
+}
+header img {
+  max-height: 70px;
+  width: auto;
+}
+header h1 {
+  margin-top: 10px;
+  font-size: clamp(20px, 4vw, 28px);
+}
 
-    header img {
-      max-height: 80px;
-    }
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 40px 20px 25px;
+  animation: fadeUp 1.2s ease forwards;
+}
+.hero h2 {
+  font-size: clamp(18px, 3vw, 28px);
+  margin-bottom: 10px;
+  color: #444;
+}
+.hero p {
+  font-size: clamp(14px, 2vw, 18px);
+  color: #666;
+  margin-bottom: 15px;
+}
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
 
-    header h1 {
-      margin-top: 10px;
-      font-size: 28px;
-    }
+/* CERTIFICATE */
+.certificate-section {
+  text-align: center;
+  padding: 30px 20px;
+  background: #fff;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  position: relative;
+  animation: fadeUp 1.5s ease forwards;
+}
+.certificate-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #ffcc33;
+  transition: 0.3s;
+}
+.certificate-section img:hover {
+  transform: scale(1.03);
+}
+.trust-badge {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 70px;
+  max-width: 20%;
+  animation: float 3s ease-in-out infinite;
+}
 
-    .hero {
-      text-align: center;
-      padding: 50px 20px 30px;
-      animation: fadeUp 1.2s ease forwards;
-    }
+/* BUTTONS */
+.download-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #ffcc33;
+  color: #000;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.3s;
+  font-size: clamp(14px, 2vw, 16px);
+}
+.download-btn:hover {
+  background: #ffaa00;
+  transform: translateY(-3px);
+}
 
-    .hero h2 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #444;
-    }
+/* SHARE */
+.share-section {
+  margin-top: 20px;
+  text-align: center;
+}
+.share-section p {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #444;
+  font-size: clamp(14px, 2vw, 16px);
+}
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.share-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffcc33;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, background 0.3s;
+}
+.share-btn img {
+  width: 24px;
+  height: 24px;
+}
+.share-btn:hover {
+  background: #ffaa00;
+  transform: translateY(-5px) scale(1.1);
+}
 
-    .hero p {
-      font-size: 18px;
-      color: #666;
-    }
+/* FOOTER */
+footer {
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+  text-align: center;
+  padding: 20px 10px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+  margin-top: 40px;
+  animation: fadeUp 2s ease forwards;
+}
+footer .share-btn {
+  margin-left: 10px;
+}
 
-    .certificate-section {
-      text-align: center;
-      padding: 40px 20px;
-      background: #fff;
-      margin: 30px auto;
-      max-width: 600px;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      position: relative;
-      animation: fadeUp 1.5s ease forwards;
-    }
+/* ANIMATIONS */
+@keyframes fadeUp { 
+  0% { opacity: 0; transform: translateY(30px); } 
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes fadeDown { 
+  0% { opacity: 0; transform: translateY(-30px); } 
+  100% { opacity: 1; transform: translateY(0); } 
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-    .trust-badge {
-      position: absolute;
-      top: -30px;
-      right: -30px;
-      width: 100px;
-      animation: float 3s ease-in-out infinite;
-    }
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  header h1 { font-size: 22px; }
+  .download-btn { padding: 10px 18px; }
+}
+@media (max-width: 480px) {
+  .trust-badge { width: 50px; top: -15px; right: -15px; }
+  .share-btn { width: 45px; height: 45px; }
+  .share-btn img { width: 20px; height: 20px; }
+}
 
-    .certificate-section img {
-      max-width: 100%;
-      border-radius: 10px;
-      border: 3px solid #ffcc33;
-      transition: 0.3s;
-    }
-
-    .certificate-section img:hover {
-      transform: scale(1.03);
-    }
-
-    .download-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #ffcc33;
-      color: #000;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: 0.3s;
-    }
-
-    .download-btn:hover {
-      background: #ffaa00;
-      transform: translateY(-3px);
-    }
-
-    /* Share buttons */
-    .share-section {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .share-section p {
-      font-weight: bold;
-      margin-bottom: 15px;
-      color: #444;
-    }
-
-    .share-btn {
-      display: inline-flex;
+.temp{
       justify-content: center;
-      align-items: center;
-      background: #ffcc33;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      margin: 0 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s, background 0.3s;
-    }
+    gap: 2rem;
+    display: flex
+;
+}
 
-    .share-btn img {
-      width: 24px;
-      height: 24px;
-    }
 
-    .share-btn:hover {
-      background: #ffaa00;
-      transform: translateY(-5px) scale(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 10px;
-      background: #333;
-      color: #fff;
-      font-size: 14px;
-      margin-top: 50px;
-      animation: fadeUp 2s ease forwards;
-    }
-
-    @keyframes fadeUp { 
-      0% { opacity: 0; transform: translateY(30px); } 
-      100% { opacity: 1; transform: translateY(0); } 
-    }
-    @keyframes fadeDown { 
-      0% { opacity: 0; transform: translateY(-30px); } 
-      100% { opacity: 1; transform: translateY(0); } 
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
   </style>
 </head>
 <body>
@@ -179,37 +221,33 @@
     <div class="share-section">
       <p>Share this certificate via:</p>
       
-      <!-- WhatsApp -->
-      <a href="https://api.whatsapp.com/send?text=Check%20out%20our%20Quality%20Certificate%20from%20Deep%20Pariwar!%20https://github.com/UditAgrawal1011/Deep-Pariwar/blob/main/certificate.png" target="_blank" class="share-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-      </a>
+      <div class="temp">
 
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/UditAgrawal1011/Deep-Pariwar/blob/main/certificate.png" target="_blank" class="share-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-      </a>
+        <!-- WhatsApp -->
+        <a href="https://api.whatsapp.com/send?text=Check%20out%20our%20Quality%20Certificate%20from%20Deep%20Pariwar!%20https://github.com/UditAgrawal1011/Deep-Pariwar/blob/main/certificate.png" target="_blank" class="share-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/certificate.png" target="_blank" class="share-btn">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
 
-      <!-- Twitter / X -->
-<a href="https://twitter.com/intent/tweet?text=Check%20out%20our%20Quality%20Certificate!%20https://github.com/UditAgrawal1011/Deep-Pariwar/blob/main/certificate.png" 
-   target="_blank" 
-   class="share-btn">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Twitter_new_X_logo.png" alt="Twitter X">
-</a>
+        
+    </div>
 
     </div>
   </section>
 
   <footer>
-    © 2025 Deep Pariwar | Delivering Quality You Can Trust
+    <p>
 
-     <!-- Instagram -->
+      © 2025 Deep Pariwar | Delivering Quality You Can Trust
+    </p>
+    <!-- Instagram -->
       <a href="https://www.instagram.com/deeppariwar" target="_blank" class="share-btn">
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
       </a>
   </footer>
 </body>
 </html>
-
-
-
-
